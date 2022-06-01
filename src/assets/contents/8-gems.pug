@@ -1,0 +1,32 @@
+- var title = "Gems"
+
+section.section
+    h2= title
+    p.text.
+        Gems provide bonus damage and cooldown reduction to specific skill. 
+        You can only equip 11 gems at the same time, so it is recommended that you 
+        should focus on important skills.
+    table.table
+        thead
+            th.cell.cell__head Damage Gems
+            th.cell.cell__head Cooldown Gems
+        tbody
+            each item in skillSet
+                if item.gem.damage || item.gem.cooldown
+                    tr.row
+                        if item.gem.damage
+                            td.cell.cell__title
+                                .wrapper
+                                    .icon
+                                        img(src= item.skillImage, alt= item.skillName)
+                                    .name
+                                        p= item.skillName
+                        else
+                            td &nbsp;
+                        if item.gem.cooldown
+                            td.cell.cell__title
+                                .wrapper
+                                    .icon
+                                        img(src= item.skillImage, alt= item.skillName)
+                                    .name
+                                        p= item.skillName

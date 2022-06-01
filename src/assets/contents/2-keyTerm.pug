@@ -1,0 +1,35 @@
+- var title = "Keyterms"
+- var text = "Since this gonna be a long guide, therefore you need to learn these keyterms before jump in the actual guide. LA player also use these term in their daily chat so it's a win-win for you to learn these."
+- 
+    var keyTerm = [{
+            sT:"RS",
+            lT:"Robust Spirit"
+        },
+        {
+            sT:"Spec",
+            lT:"Specialization"
+        },
+        {
+            sT:"Crit",
+            lT:"Critical"
+        },
+        {
+            sT:"CDR",
+            lT:"Cooldown Reduction"
+        },
+        {
+            sT:"DMG",
+            lT:"Damage"
+        },
+        {
+            sT:"ATKS",
+            lT:"Attack speed"
+        }
+    ]
+section.section
+    h2= title
+    p= text
+    .text__table
+        for item in keyTerm
+                div= item.sT + ":"
+                div= item.lT

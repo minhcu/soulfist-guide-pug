@@ -1,0 +1,39 @@
+doctype html
+
+- var title = "Robust Spirit Soulfist Guide 2022"
+- var description = "Latest Robust Spirit Soulfist guide with variation of thing which help you get that Cruel Fighter"
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://unpkg.com/browse/normalize.css@8.0.1/normalize.css")
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+        link(rel="canonical" href="")
+
+        //- SEO things
+        meta(name="description" content="#{description}")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content="#{title}")
+        meta(property="og:description" content="#{description}")
+        meta(property="og:url" content="")
+        meta(property="og:site_name" content="#{description}")
+
+        //- Twitter things
+        meta(name="twitter:card")
+        meta(name="twitter:title" content="#{title}")
+        meta(name="twitter:description" content="#{description}")
+        meta(name="twitter:label1" content="Written by")
+        meta(name="twitter:data1" content="Specialization")
+        meta(name="twitter:label2" content="Time to read")
+        meta(name="twitter:data2" content="Till this class ded")
+
+        title= title
+    body 
+        include assets/components/components.pug
+        include assets/templates/head.pug
+        include assets/templates/body.pug
+        include assets/templates/foot.pug
+        script(src="./js/index.js") 

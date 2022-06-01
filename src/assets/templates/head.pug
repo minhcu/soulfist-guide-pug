@@ -1,0 +1,24 @@
+- var title = "robust spirit soulfist guide 2022"
+- var subTitle = "a casual robust spirit soulfist guide for all age"
+- var brandName = "soulfist guide"
+- var youtubeURL = "https://www.youtube.com/channel/UCauDcigv5QYBEzS-CKXlAXA"
+- var twitchURL = "https://www.twitch.tv/specializationsf"
+
+nav.nav.nav--fixed-top.nav--transparent
+    .container
+        .nav--translate
+            a(href="#") 
+                p.text.text__brand= brandName
+        .nav--collapse
+            ul.nav__icon
+                li.nav__item
+                    a(href= youtubeURL)
+                        i.fab.fa-youtube
+                li.nav__item
+                    a(href= twitchURL)
+                        i.fab.fa-twitch
+
+section.head.block--center
+    .container
+        h1.text.text__title.text--center= title
+        p.text.text__sub-title.text--center= subTitle

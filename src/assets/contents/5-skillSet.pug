@@ -1,0 +1,32 @@
+- var title = "Skill Set"
+- var tabTitle = ["basic", "meta", "weird"]
+section.section
+    h2= title
+    p.
+        There are a variable of skill set that you could use depend on your preferences and 
+        raid. But since this is an ALL AGE GUIDE, let us start with a few common skill set.
+    .tab
+        .tab__header
+            ul.tab__nav
+                each item in tabTitle
+                    li 
+                        a(href="#"+item).tab__nav__link= item
+        .tab__body
+                .tab__pane(id="basic")
+                    include ./5-skillSet/basic.pug
+                .tab__pane(id="meta")
+                    include ./5-skillSet/meta.pug
+                .tab__pane(id="weird")
+                    include ./5-skillSet/weird.pug
+    .alert.alert--primary
+        .title
+            p.text.text--center Awakening of the day
+        .wrapper
+            .item
+                .img
+                    img(src= awakenings.wd.url, alt=awakenings.wd.name)
+                .name
+                    p.text= awakenings.wd.name
+            .label
+                p.text One of the biggest damage Awakening in the game.
+

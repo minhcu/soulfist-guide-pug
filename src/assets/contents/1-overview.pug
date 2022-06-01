@@ -1,0 +1,9 @@
+- var title = "Overview"
+- var text = "You are here because, well, maybe the top 4 result on Google wasn't enough? And also you are wondering to yourself:"
+- var list = ["\"Wasn't Robust Spirit about bombs only?\"","\"What if I missed my bombs?\"","\"What do I do in downtime?\"","\"Where is my damage?\""]
+
+section.section
+    h2= title
+    p.text= text
+    each item in list
+        p.text.text--center= item

@@ -1,0 +1,37 @@
+- var title = "Runes"
+
+section.section
+    h2= title
+    p.text.
+        Gems provide bonus damage and cooldown reduction to specific skills, therefore it is very important 
+        for Soulfist to have these.
+    p.text.
+        You can use lower tier rune if you don't have the exact rune in this table.
+    table.table
+        thead
+            tr.row
+                th.cell.cell__head Skill
+                th.cell.cell__head Primary
+                th.cell.cell__head Secondary
+        tbody
+            each item in skillSet
+                tr.row
+                    td.cell.cell__title
+                        .wrapper
+                            .icon
+                                img(src= item.skillImage, alt= item.skillName)
+                            .name
+                                p= item.skillName
+                    td.cell.cell__title
+                        .wrapper
+                            .icon
+                                img(src= item.rune.primary.url, alt= item.rune.primary.name)
+                            .name
+                                p= item.rune.primary.name
+                    if item.rune.secondary.name
+                        td.cell.cell__title
+                            .wrapper
+                                .icon
+                                    img(src= item.rune.secondary.url, alt= item.rune.secondary.name)
+                                .name
+                                    p= item.rune.secondary.name

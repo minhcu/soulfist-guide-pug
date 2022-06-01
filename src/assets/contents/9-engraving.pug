@@ -1,0 +1,112 @@
+- var title = "Engravings"
+
+include ../gamedatas/engraving.pug
+
+- var rs = engravings.classEngravings.robustSpirit
+- var grudge = engravings.battleEngravings.grudge
+- var kbw = engravings.battleEngravings.kbw
+- var CD = engravings.battleEngravings.CD
+- var adre = engravings.battleEngravings.adre
+- var precise = engravings.battleEngravings.precise
+- var awaken = engravings.battleEngravings.awaken
+- var mass = engravings.battleEngravings.mass
+
+mixin engravingBlock(engraving)
+    .block.block--center
+        .block.block__engraving.block--margin-right
+            img(src=engraving.url, alt=engraving.name)
+        .block.block__engraving
+            h3= engraving.name
+            block
+
+section.section
+    .block
+        h2= title
+        p.text.
+            Engravings are powerfull feature that decide your playstyle in the game. 
+            Below is the list of recommended Engravings for playing.
+        p.text.
+            #[+badge("Required", "danger")] meaning it is strongly recommended.
+        p.text.
+            #[+badge("Optional", "warning")] meaning you must pick one engraving within the priority.
+        p.text.
+            #[+badge("Priority", "info")] meaning in which order that you should get.
+
+    //- Robust Spirit
+    +engravingBlock(rs)
+        +badge("Required","danger")
+        +badge("Prority: 1","info")
+        p.text.
+            Since this is a Robust Spirit guide, therefore it is a must have Engraving 
+            with top priority. Also, you must get LV.3 Robust Spirit since you going use 
+            your skill in Hype.
+
+    .divider
+
+    //- Grudge
+    +engravingBlock(grudge)
+            +badge("Required","danger")
+            +badge("Prority: 2","info")
+            p.text.
+                Grudge is one of the TOP TIER Engraving for every damage dealer in Lost Ark. 
+                20% multiplier damage in exchange for 20% incoming damage. But since this is 
+                a dodging game, this seem reasonable.
+    
+    .divider
+
+    //- Precise Dagger
+    +engravingBlock(precise)
+            +badge("Optional","warning")
+            +badge("Prority: 3","info")
+            p.text.
+                Precise Dagger give you flat 20% critical rate in exchange of 10% critical 
+                damage which help you in start out spamming rotation without thinking, 
+                it is recommended if you don't want to manage too much buff.
+
+    //- Adrenaline
+    +engravingBlock(adre)
+        +badge("Optional","warning")
+        +badge("Prority: 3","info")
+        p.text.
+            Adrenaline provide 15% critical rate plus 6% additional attack power. It is 
+            confirm that this give you more DPS than Precise Dagger. But, in exchange, 
+            you must maintaining or getting 6 stacks before spamming out rotation.
+
+    .divider
+
+    //- KBW
+    +engravingBlock(kbw)
+        +badge("Required","danger")
+        +badge("Prority: 4","info")
+        p.text.
+            This engraving only bring benefit after you got at least 50-60% critical rate.
+            Therefore I put it in #[+badge("Prority: 4","info")]. So you would like this 
+            engraving after having enough critical rate, which give you 50% more critical 
+            damage.
+
+    .divider
+
+    //- Cursed Doll
+    +engravingBlock(CD)
+        +badge("Optional","warning")
+        +badge("Prority: 5","info")
+        p.text.
+            This give you 16% additional attack power in exchange of 25% healing reduced. 
+            Which is the best engraving within #[+badge("Prority: 5","info")] since every 
+            raid will need 1 support in the team.
+
+    //- Mass Increase
+    +engravingBlock(mass)
+        +badge("Optional","warning")
+        +badge("Prority: 5","info")
+        p.text.
+            This is an alternative to Cursed Doll with 10% Attack Speed Reduced. But it is 
+            only recommended if you have over 140% Attack Speed.
+
+    //- Awakening
+    +engravingBlock(awaken)
+            +badge("Optional","warning")
+            +badge("Prority: 5","info")
+            p.text.
+                If you are a fan of throwing in balls into the boss face, then this is the 
+                engraving you need. This will help you throwing out Awakening every 100 seconds.

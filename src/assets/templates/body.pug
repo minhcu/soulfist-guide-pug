@@ -1,0 +1,36 @@
+- 
+    var skill = function (skillName, className) {
+        const HTML = `<span class="text--${className}">${skillName}</span>`;
+        return HTML;
+    }
+
+- 
+    var awakenings = {
+        wd: {
+            name: "World Domination",
+            url: "./img/skill/awakening/wd.webp"
+        },
+        rd: {
+            name: "Domination Ray",
+            url: "./img/skill/awakening/rd.webp"
+        },
+    }
+
+.body.container
+    .content
+        include ../contents/1-overview.pug
+        include ../contents/2-keyTerm.pug
+        include ../contents/3-whatIsRS.pug
+        include ../contents/4-statPriority.pug
+        include ../contents/5-skillSet.pug
+        include ../contents/6-tripod.pug
+        include ../contents/7-runes.pug
+        include ../contents/8-gems.pug
+        include ../contents/9-engraving.pug
+        include ../contents/10-gearSet.pug
+        include ../contents/11-cardSet.pug
+        include ../contents/12-rotations.pug
+        include ../contents/13-ending.pug
+        include ../contents/14-credits.pug
+    .side-bar
+        include sideBar.pug

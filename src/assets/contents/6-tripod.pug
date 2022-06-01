@@ -1,0 +1,37 @@
+- var title = "Tripods"
+
+section.section
+    h2= title
+    p.text.
+        Trying to maximize these tripod will help increase your DPS and gameplay to a whole new level. 
+        Tripod levels can go up to 5, which mean you need a Lv.4 tripod in your gear. Remember to 
+        doing this slowly and effiency, you don't need to rush this.
+    .table.grid.grid--2col
+        each item in skillSet
+            .row.grid.grid--2col.grid--align-center
+                .cell.cell__title
+                    .wrapper
+                        .icon
+                            img(src= item.skillImage, alt= item.skillName)
+                        .name
+                            p= item.skillName
+                .cell.cell__detail
+                        .tripod
+                            if item.tripod1.upgradeAble
+                                .tripod__image
+                                    img(src= item.tripod1.url, alt= item.tripod1.name)
+                                .tripod__name
+                                    p= item.tripod1.name
+                        .tripod
+                            if item.tripod2.upgradeAble
+                                .tripod__image
+                                    img(src= item.tripod2.url, alt= item.tripod2.name)
+                                .tripod__name
+                                    p= item.tripod2.name
+                        if item.tripod3.url
+                            if item.tripod3.upgradeAble
+                                .tripod
+                                    .tripod__image
+                                        img(src= item.tripod3.url, alt= item.tripod3.name)
+                                    .tripod__name
+                                        p= item.tripod3.name
