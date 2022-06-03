@@ -4,6 +4,11 @@
 
 // Global thing or sth
 // I can't name things
+
+html {
+    scroll-padding-top: 100px;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
@@ -76,6 +81,19 @@
     z-index: 999;
     font-size: inherit;
 
+    .skill {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        background-size: contain;
+        margin-right: 3px;
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+
     &--center {
         text-align: center;
     }
@@ -114,6 +132,11 @@
         grid-template-columns: 100px 200px;
         justify-content: center;
         row-gap: 1em;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -325,6 +348,9 @@
 
     &__pane {
         display: none;
+        .table {
+            border-spacing: 0!important;
+        }
     }
 
     &__pane.show {
@@ -332,6 +358,7 @@
         grid-template-columns: 1fr 1fr;
         gap: .5rem;
         justify-content: space-between;
+        
     }
 
 }
