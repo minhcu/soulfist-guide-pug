@@ -4,6 +4,14 @@
         return HTML;
     }
 
+-
+    var skillText = function (skillName) {
+        const skill = skillSet.find(e => e.skillName === skillName)
+        const imgURL = "https://minhcu.github.io/soulfist-guide"+ skill.skillImage.slice(1)
+        const HTML = `<span class="text text--info"><span class="skill" style="background-image: url(&quot;${imgURL}&quot;);"></span>${skill.skillName}</span>`;
+        return HTML;
+    }
+
 - 
     var awakenings = {
         wd: {
