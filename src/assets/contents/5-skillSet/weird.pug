@@ -1,1 +1,49 @@
-p.text--center I will update this later on
+include ../../gamedatas/weirdSKillSet.pug
+
+div.pane--grid
+    div
+        p.text.
+            This is some weird long-range build with All Out Attack engraving. Try this at your own risk.
+        p.text.
+            Maybe I will try this in the future if I have Level 9 gems.
+        p.text.
+            !{skillText("Bolting Crash",weirdSkillSet)}/!{skillText("Flash Step",weirdSkillSet)} work as a moving skill 
+            or can be used as a self-buff.
+        p.text.
+            !{skillText("Energy Release",weirdSkillSet)} is the main self-buff skill and 
+            must be used first in almost every rotation.
+        p.text.
+            !{skillText("Bolting Crash",weirdSkillSet)} can be used for Destruction and Counter.
+        p.text.
+            !{skillText("Merciless Pummel",weirdSkillSet)}/!{skillText("Energy Blast",weirdSkillSet)}/
+            !{skillText("Energy Bullet",weirdSkillSet)}/!{skillText("Crippling Barrier",weirdSkillSet)} have can be used for Staggering.
+
+    table.table
+        thead
+            tr.row
+                th.cell.cell__head Skill name
+                th.cell.cell__head Level
+                th.cell.cell__head Tripods
+        each item in weirdSkillSet
+            tr.row
+                td.cell.cell__title
+                    .wrapper
+                        .icon
+                            img(src= item.skillImage, alt= item.skillName)
+                        .name
+                            p= item.skillName
+                td.cell.cell__level 
+                    .level= item.skillLevel
+                td.cell.cell__detail
+                        .tripod
+                            .tripod-1
+                                img(src= item.tripod1.url, alt= item.tripod1.name)
+                            .tripod-2
+                                img(src= item.tripod2.url, alt= item.tripod2.name)
+                            if item.tripod3.url
+                                .tripod-3
+                                    img(src= item.tripod3.url, alt= item.tripod3.name)
+
++tripod(weirdSkillSet)
++runes(weirdSkillSet)
++gems(weirdSkillSet)

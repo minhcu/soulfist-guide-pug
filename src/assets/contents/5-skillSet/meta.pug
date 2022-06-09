@@ -1,1 +1,51 @@
-p.text--center I will update this later on
+include ../../gamedatas/metaSKillSet.pug
+
+div.pane--grid
+    div
+        p.text.
+            This is the Meta build in Korea, it works for both Energy Overflow and Robust Spirit build. But I wouldn't recommend 
+            this if you don't have any Level 9 gems or at least 1700 Specs. Also this build lack of Destruction with only one Lv.2 
+            destruction.
+        p.text.
+            Maybe I will try this in the future if I have Level 9 gems.
+        p.text.
+            !{skillText("Bolting Crash",metaSkillSet)}/!{skillText("Flash Step",metaSkillSet)} work as a moving skill 
+            or can be used as a self-buff.
+        p.text.
+            !{skillText("Energy Release",metaSkillSet)} is the main self-buff skill and 
+            must be used first in almost every rotation.
+        p.text.
+            !{skillText("Bolting Crash",metaSkillSet)} can be used for Destruction and Counter.
+        p.text.
+            !{skillText("Merciless Pummel",metaSkillSet)}/!{skillText("Energy Blast",metaSkillSet)}/
+            !{skillText("Heavenly Squash",metaSkillSet)}/!{skillText("Crippling Barrier",metaSkillSet)} have can be used for Staggering.
+
+    table.table
+        thead
+            tr.row
+                th.cell.cell__head Skill name
+                th.cell.cell__head Level
+                th.cell.cell__head Tripods
+        each item in metaSkillSet
+            tr.row
+                td.cell.cell__title
+                    .wrapper
+                        .icon
+                            img(src= item.skillImage, alt= item.skillName)
+                        .name
+                            p= item.skillName
+                td.cell.cell__level 
+                    .level= item.skillLevel
+                td.cell.cell__detail
+                        .tripod
+                            .tripod-1
+                                img(src= item.tripod1.url, alt= item.tripod1.name)
+                            .tripod-2
+                                img(src= item.tripod2.url, alt= item.tripod2.name)
+                            if item.tripod3.url
+                                .tripod-3
+                                    img(src= item.tripod3.url, alt= item.tripod3.name)
+
++tripod(metaSkillSet)
++runes(metaSkillSet)
++gems(metaSkillSet)

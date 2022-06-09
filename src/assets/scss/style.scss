@@ -354,11 +354,13 @@ html {
     }
 
     &__pane.show {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: .5rem;
-        justify-content: space-between;
-        
+        display: block;
+        .pane--grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .5rem;
+            justify-content: space-between;
+        }
     }
 
 }
